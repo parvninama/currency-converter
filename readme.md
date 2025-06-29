@@ -95,8 +95,8 @@ currency-converter/
 
 <table>
   <tr>
-    <td><img src="./screenshots/focus-light.gif" width="250"/></td>
-    <td><img src="./screenshots/focus-dark.gif" width="250"/></td>
+    <td><img src="./screenshots/focus-light.gif" width="450"/></td>
+    <td><img src="./screenshots/focus-dark.gif" width="450"/></td>
   </tr>
   <tr>
     <td align="center">Light Mode Focus</td>
