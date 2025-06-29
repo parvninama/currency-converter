@@ -1,0 +1,349 @@
+/* ========== Global Styles ========== */
+
+/* Reset margin & padding, and apply bold font globally */
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-weight: bold;
+}
+
+/* Focus outline and glow effect for inputs, selects, buttons */
+
+input:focus, select:focus , button:focus {
+  outline: 3px solid #e0635f;
+  box-shadow: 0 0 5px #f2e9e4;
+  transition: 0.2s ease;
+}
+
+/* Center the app on screen, set base font and background */
+body {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #81b29a; 
+  font-size: 1.2rem;
+}
+
+/* Smooth hover effect for all buttons */
+button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* ========== Container Styling ========== */
+
+.container {
+  position: relative;
+  background-color: #fed9b7;
+  border-radius: 1rem;
+  min-height: 45vh;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  padding: 3rem;
+}
+
+/* ========== Theme Toggle Button ========== */
+
+.theme-button {
+  width: 45px;
+  position: absolute; 
+  right: 1rem;
+  background: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 10;
+  color: #e07a5f;
+}
+
+/* Theme button hover effect */
+.theme-button:hover {
+  color: #d66b4f;
+  transform: scale(1.1);
+}
+
+/* ========== Form Styling ========== */
+
+form {
+  margin: 2rem 0 1rem 0;
+}
+
+/* Common styles for form elements */
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+/* Input field appearance */
+form input {
+  margin-top: 10px;
+  border: 1px solid #e07a5f;
+  background-color: #fed9b7;
+  color: #000000;
+  font-size: 1rem;
+  height: 3rem;
+  padding-left: 0.5rem;
+}
+
+/* Remove default number input arrows */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; 
+}
+
+/* Input Placeholder */
+input::placeholder {
+  color: #e07a5f; 
+  opacity: 1; 
+}
+
+/* ========== Dropdown Section ========== */
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dropdown i {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* ========== Currency Selector Styling ========== */
+
+.select-container img {
+  max-width: 2rem;
+}
+
+.select-container {
+  margin-top: 0.5rem;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e07a5f;
+}
+
+.select-container select {
+  font-size: 1rem;
+  width: 4rem;
+  padding: 10px;
+  background-color: #fed9b7;
+  border-radius: inherit;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* Custom dropdown arrow using FontAwesome */
+
+.select-container::after {
+  content: "\f078"; 
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.8rem;
+  color: #000000;
+  position: absolute;
+  left:5rem;
+  pointer-events: none;
+}
+
+/* ========== Exchange Button ========== */
+
+.exchange-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  margin-top: 1.1rem;
+  padding-bottom: 1rem;
+  height: 37px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Exchange button hover effect */
+.exchange-button:hover {
+  color: #d66b4f;
+  transform: scale(1.1);
+}
+
+/* ========== Message Display ========== */
+
+.msg {
+  margin: 2rem 0 2rem 0;
+  font-size: 1.5rem;
+}
+
+.msg.success {
+  color: #3fa34d;
+  text-decoration: underline;
+}
+
+.msg.error {
+  color: #ef233c;
+  text-decoration: underline;
+}
+
+/* Hide message element */
+
+.hide {
+  display: none;
+}
+
+/* ========== Submit Button ========== */
+
+.submit-button {
+  height: 3rem;
+  background-color: #e07a5f;
+  color: #000000;
+  font-size: 1.15rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+  background-color: #d66b4f; /* Slightly darker than base */
+  transform: scale(1.02);
+}
+
+/* ========== Dark Theme Styles ========== */
+
+body.dark-theme {
+  background-color: #343a40;
+  color: #f2e9e4;
+}
+
+body.dark-theme .container {
+  background-color: #495057;
+  color: #f2e9e4;
+}
+
+body.dark-theme .select-container{
+  border-color: #f2e9e4;
+}
+
+body.dark-theme input,
+body.dark-theme select {
+  background-color: #495057;
+  border-color: #f2e9e4;
+  color: #f2e9e4;
+}
+
+body.dark-theme .theme-button {
+  color: #f2e9e4;
+}
+
+body.dark-theme .submit-button {
+  background-color: #f2e9e4;
+  color: #1B282F;
+}
+
+body.dark-theme .msg.success { 
+  color: #95d5b2;
+}
+
+body.dark-theme .msg.error {
+  color: #f08080;
+}
+
+/* Dark theme placeholder */
+body.dark-theme input::placeholder {
+  color: #ccc;
+}
+
+/* Dark theme focus styles */
+body.dark-theme input:focus,
+body.dark-theme select:focus , 
+body.dark-theme button:focus {
+  outline: 3px solid #fed9b7;
+  box-shadow: 0 0 5px #1B282F;
+  transition: 0.2s ease;
+}
+
+/* Dark theme dropdown arrow */
+body.dark-theme .select-container::after{
+  color: #f2e9e4;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .theme-button {
+    top: 1rem; 
+  }
+
+  .dropdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dropdown i {
+    transform: rotate(90deg);
+    margin: 0;
+  }
+
+  .exchange-button {
+    padding-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .msg {
+    font-size: 1.2rem;
+  }
+}
+
+/* Smaller Devices / Tablets */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    max-width: 95%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+  }
+
+  .msg {
+    font-size: 1rem;
+  }
+
+  .select-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .select-container select {
+    width: auto;
+  }
+}

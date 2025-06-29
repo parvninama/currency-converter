@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currency Converter | Parv Ninama</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Theme toggle button (light/dark mode) -->
+        <button class="theme-button" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <!-- App heading -->
+        <h2>Currency Converter</h2>
+
+        <!-- Currency conversion form -->
+        <form>
+
+            <!-- Input field for entering amount -->
+            <div class="amount">
+                <p>Enter Amount :</p>
+                <input type="number" min="1" step="any" placeholder="Enter amount to convert"/>
+            </div>
+
+            <!-- Currency selection section -->
+            <div class="dropdown">
+
+                <!-- From currency selection -->
+                <div class="from">
+                    <p>From :</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png">
+                        <select name="From"></select>
+                    </div>
+                </div>
+
+                <!-- Exchange button to swap currencies -->
+                <button type="button" class="exchange-button" aria-label="Swap currencies">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <!-- To currency selection -->
+                <div class="to">
+                    <p>To :</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select name="To"></select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message area to show result or errors -->
+            <div class="msg hide" ></div>
+
+            <!-- Submit button to get exchange rate -->
+            <button type="submit" class="submit-button">Get Exchange Rate</button>
+        </form>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
