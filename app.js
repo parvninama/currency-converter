@@ -134,6 +134,7 @@ const updateExchangeRate = async () => {
     // Handle fetch or API error
     msg.innerText = "Error fetching exchange rate. Please try again.";
     submitButton.style.marginTop = "0";
-    msg.classList.remove("hide");
+    msg.classList.remove("hide", "success");
+    msg.classList.add("error");
   }
 };
