@@ -280,8 +280,11 @@ body.dark-theme button:focus {
   box-shadow: 0 0 5px #1B282F;
   transition: 0.2s ease;
 }
-
-
+/* Dark theme exchange button hover effect */
+body.dark-theme .exchange-button:hover {
+  color: #f2e9e4;
+  transform: scale(1.1);
+}
 
 /* Dark theme dropdown arrow */
 body.dark-theme .select-container::after{
