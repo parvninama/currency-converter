@@ -3,9 +3,11 @@
 Effortlessly convert currencies in real time with a smooth, flag-powered interface.  
 This sleek, responsive web app brings you live exchange rates, an elegant light/dark theme toggle, and a polished user experience — right in your browser.
 
+
 <p align="center">
   <img src="./screenshots/demo.gif" alt="Demo" width="85%" style="border:1px solid #ddd; border-radius:10px;" />
 </p>
+
 
 ## ✨ Features
 
