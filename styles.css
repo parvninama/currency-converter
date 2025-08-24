@@ -11,13 +11,15 @@
 /* Focus outline and glow effect for inputs, selects, buttons */
 
 input:focus, select:focus , button:focus {
-  outline: 3px solid #e0635f;
+  outline: 3px solid #d66b4f;
   box-shadow: 0 0 5px #f2e9e4;
   transition: 0.2s ease;
 }
 
 /* Center the app on screen, set base font and background */
 body {
+  background:url("Background\ Images/light-mode.png");
+  background-size: cover;
   color: #000000;
   display: flex;
   justify-content: center;
@@ -227,9 +229,24 @@ input::placeholder {
   transform: scale(1.02);
 }
 
+/* ========== Footer Link ========== */
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#e07a5f;
+  padding: 5px;
+}
+.footer-link:hover {
+  color:#d66b4f;
+}
+
 /* ========== Dark Theme Styles ========== */
 
 body.dark-theme {
+  background:url("Background\ Images/dark-mode.png");
+  background-size: cover;
   background-color: #343a40;
   color: #f2e9e4;
 }
@@ -291,6 +308,13 @@ body.dark-theme .select-container::after{
   color: #f2e9e4;
 }
 
+/* Dark theme footer link */
+body.dark-theme .footer-link {
+  color:#ccc;
+}
+body.dark-theme .footer-link:hover {
+  color:#9d9c9c;
+}
 /* ========== Responsive Styles ========== */
 
 /* Mobile Devices */

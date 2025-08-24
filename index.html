@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Currency Converter | Parv Ninama</title>
 
+  <!-- Background Images to preload -->
+  <link rel="preload" as="image" href="Background Images/light-mode.png" />
+  <link rel="preload" as="image" href="Background Images/dark-mode.png" />
+
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
@@ -37,7 +41,7 @@
             <!-- Input field for entering amount -->
             <div class="amount">
                 <p>Enter Amount :</p>
-                <input type="number" min="1" step="any" placeholder="Enter amount to convert"/>
+                <input type="number" value="1" min="1" step="any" placeholder="Enter amount to convert"/>
             </div>
 
             <!-- Currency selection section -->
@@ -73,6 +77,9 @@
             <!-- Submit button to get exchange rate -->
             <button type="submit" class="submit-button">Get Exchange Rate</button>
         </form>
+        <footer>
+            <a class="footer-link" href="https://github.com/parvninama" target="_blank">Made by Parv</a>
+        </footer>
     </div>
 
     <!-- JavaScript files -->
