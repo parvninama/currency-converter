@@ -319,6 +319,10 @@ body.dark-theme .footer-link:hover {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+  body{
+  background:url("Background\ Images/light-mode-mobile.png");
+  }
+
   .container {
     padding: 1.5rem;
     max-width: 90%;
@@ -345,6 +349,11 @@ body.dark-theme .footer-link:hover {
 
   .msg {
     font-size: 1.2rem;
+  }
+
+   body.dark-theme {
+    background:url("Background\ Images/dark-mode-mobile.png");
+    background-size: cover;
   }
 }
 

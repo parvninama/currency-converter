@@ -1,4 +1,4 @@
-## 💶 Currency Converter
+##  Currency Converter
 
 Effortlessly convert currencies in real time with a smooth, flag-powered interface.  
 This sleek, responsive web app brings you live exchange rates, an elegant light/dark theme toggle, and a polished user experience — right in your browser.
@@ -9,24 +9,24 @@ This sleek, responsive web app brings you live exchange rates, an elegant light/
 </p>
 
 
-## ✨ Features
+##  Features
 
-- 🔁 Convert between over 150 currencies
-- 🌐 Live exchange rates using the [Fawaz Ahmed Currency API](https://github.com/fawazahmed0/currency-api)
-- 📱 Fully responsive design for mobile and tablets
-- 🌙 Light/Dark theme toggle
-- 🚫 Input validation with user-friendly messages
-- 🏳️ Country flags update dynamically based on selected currency
-
----
-
-## 🔗 Live Demo
-
-🚀 [Try the Currency Converter](https://parvninama.github.io/currency-converter/)
+-  Convert between over 150 currencies
+-  Live exchange rates using the [Fawaz Ahmed Currency API](https://github.com/fawazahmed0/currency-api)
+-  Fully responsive design for mobile and tablets
+-  Light/Dark theme toggle
+-  Input validation with user-friendly messages
+-  Country flags update dynamically based on selected currency
 
 ---
 
-## 🛠️ Built With
+##  Live Demo
+
+ [Try the Currency Converter](https://parvninama.github.io/currency-converter/)
+
+---
+
+##  Built With
 
 - **HTML5**
 - **CSS3**
@@ -37,7 +37,7 @@ This sleek, responsive web app brings you live exchange rates, an elegant light/
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```
 currency-converter/
@@ -51,7 +51,7 @@ currency-converter/
 ```
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 1. User enters an amount and selects currencies
 2. Live exchange rates are fetched via the API
@@ -60,15 +60,15 @@ currency-converter/
 
 ---
 
-## 💻 Desktop View 
+##  Desktop View 
 
-### ☀️ Light Mode
+###  Light Mode
 ![Desktop Light](./screenshots/light-theme.png)
 
-### 🌙 Dark Mode
+###  Dark Mode
 ![Dark Theme](./screenshots/dark-theme.png)
 
-## 📱 Mobile View (Light & Dark Modes)
+##  Mobile View (Light & Dark Modes)
 
 <table>
   <tr>
@@ -84,13 +84,13 @@ currency-converter/
 
 ---
 
-## ♿ Accessibility
+##  Accessibility
 
 - Supports full **keyboard navigation** using the `Tab` key
 - Custom **focus styles** (outline & glow) improve visibility
 - Works in both **light and dark mode**
 
-## 🔄 Tab Focus in Action
+##  Tab Focus in Action
 
 <table>
   <tr>
@@ -105,13 +105,13 @@ currency-converter/
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License** — feel free to use, modify, and share!
 
 ---
 
-## 🤝 Connect
+##  Connect
 
 Feel free to check out more of my work on  
 👉 [Parv Ninama](https://github.com/parvninama)
