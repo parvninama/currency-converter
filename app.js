@@ -81,41 +81,29 @@ submitButton.addEventListener("click", async (evt) => {
 // Function: Fetch and Display Exchange Rate
 
 const updateExchangeRate = async () => {
-  const amount = document.querySelector("input");
-  const msg = document.querySelector(".msg");
-  const amountValue = Number(amount.value);
+  const amountInput = document.querySelector(".input");
+  const output = document.querySelector(".output");
 
-  // Input validation
+  const amountValue = Number(amountInput.value);
+
   if (isNaN(amountValue) || amountValue < 1) {
-    msg.innerText = "Please enter a valid amount ";
-    msg.classList.remove("hide", "success");
-    msg.classList.add("error");
-    submitButton.style.marginTop = "0";
+    output.value = 0;
     return;
   }
 
-  // Construct API URL using selected "From" currency
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
 
   try {
-    // Fetch exchange data from API
     const response = await fetch(URL);
     const data = await response.json();
 
-    // Extract conversion rate and calculate converted amount
-    const rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+    const rate =
+    data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
     const finalAmount = (rate * amountValue).toFixed(2);
 
-    // Show success message
-    msg.classList.remove("hide", "error", "success");
-    msg.classList.add("success");
-    msg.innerText = `${amountValue} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
-    submitButton.style.marginTop = "0";
+    // Update readonly input
+    output.value = finalAmount;
   } catch (error) {
-    // Handle fetch or API error
-    msg.innerText = "Error fetching exchange rate. Please try again.";
-    submitButton.style.marginTop = "0";
-    msg.classList.remove("hide", "success");
-    msg.classList.add("error");
+    output.value = 0;
   }
 };

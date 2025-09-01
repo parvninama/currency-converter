@@ -72,6 +72,10 @@ form {
   margin: 2rem 0 1rem 0;
 }
 
+.amount{
+  margin-top: 1rem;
+}
+
 /* Common styles for form elements */
 form select,
 button,
@@ -188,29 +192,6 @@ input::placeholder {
   transform: scale(1.1);
 }
 
-/* ========== Message Display ========== */
-
-.msg {
-  margin: 2rem 0 2rem 0;
-  font-size: 1.5rem;
-}
-
-.msg.success {
-  color: #3fa34d;
-  text-decoration: underline;
-}
-
-.msg.error {
-  color: #ef233c;
-  text-decoration: underline;
-}
-
-/* Hide message element */
-
-.hide {
-  display: none;
-}
-
 /* ========== Submit Button ========== */
 
 .submit-button {
@@ -276,14 +257,6 @@ body.dark-theme .submit-button {
   color: #1B282F;
 }
 
-body.dark-theme .msg.success { 
-  color: #95d5b2;
-}
-
-body.dark-theme .msg.error {
-  color: #f08080;
-}
-
 /* Dark theme placeholder */
 body.dark-theme input::placeholder {
   color: #ccc;
@@ -347,9 +320,6 @@ body.dark-theme .footer-link:hover {
     font-size: 1.2rem;
   }
 
-  .msg {
-    font-size: 1.2rem;
-  }
 
    body.dark-theme {
     background:url("Background\ Images/dark-mode-mobile.png");
@@ -372,12 +342,10 @@ body.dark-theme .footer-link:hover {
     font-size: 1rem;
   }
 
-  .msg {
-    font-size: 1rem;
-  }
-
   .select-container {
-    width: 100%;
+    width:100%;
+    gap: 0.5rem;
+    padding: 0.3rem;
     justify-content: space-between;
   }
 
