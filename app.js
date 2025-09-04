@@ -4,6 +4,8 @@ const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/
 // Select necessary DOM elements
 const body = document.body;
 const form = document.querySelector("form");
+const amountInput = document.querySelector(".input");
+const amountOutput = document.querySelector(".output");
 const dropdowns = document.querySelectorAll(".dropdown select");
 const submitButton = document.querySelector(".submit-button");
 const fromCurr = document.querySelector(".from select");
@@ -31,13 +33,12 @@ for (let select of dropdowns) {
   });
 }
 
-// Form Submit Handler
-form.addEventListener("submit", function (e) {
+// Form Submit Handler 
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  submitButton.disabled = true; 
-  updateExchangeRate().finally(() => {
-    submitButton.disabled = false;
-  });
+  submitButton.disabled = true;
+  await updateExchangeRate();
+  submitButton.disabled = false;
 });
 
 // Function: Update Country Flag
@@ -61,9 +62,8 @@ themeButton.addEventListener("click", () => {
 exchangeButton.addEventListener("click", (evt) => {
   evt.preventDefault();
 
-  let temp = fromCurr.value;
-  fromCurr.value = toCurr.value;
-  toCurr.value = temp;
+  [fromCurr.value, toCurr.value] = [toCurr.value, fromCurr.value];
+  [amountInput.value, amountOutput.value] = [amountOutput.value, amountInput.value];
 
   updateFlag(fromCurr);
   updateFlag(toCurr);
@@ -71,23 +71,17 @@ exchangeButton.addEventListener("click", (evt) => {
   submitButton.focus();
 });
 
-// Submit Button Click Handler
-
-submitButton.addEventListener("click", async (evt) => {
-  evt.preventDefault();
-  updateExchangeRate(); 
-});
-
 // Function: Fetch and Display Exchange Rate
 
 const updateExchangeRate = async () => {
-  const amountInput = document.querySelector(".input");
-  const output = document.querySelector(".output");
-
   const amountValue = Number(amountInput.value);
 
-  if (isNaN(amountValue) || amountValue < 1) {
-    output.value = 0;
+  if (isNaN(amountValue) || amountValue < 0) {
+    amountOutput.value = "Invalid amount!";
+    return;
+  }
+  if (amountValue === 0) {
+    amountOutput.value = 0;
     return;
   }
 
@@ -97,13 +91,11 @@ const updateExchangeRate = async () => {
     const response = await fetch(URL);
     const data = await response.json();
 
-    const rate =
-    data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+    const rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
     const finalAmount = (rate * amountValue).toFixed(2);
 
-    // Update readonly input
-    output.value = finalAmount;
+    amountOutput.value = finalAmount;
   } catch (error) {
-    output.value = 0;
+    amountOutput.value = "Error fetching rate";
   }
 };
